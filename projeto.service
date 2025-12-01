@@ -1,0 +1,17 @@
+[Unit]
+# descrição do serviço Python para a tarefa da Prática 5
+Description=Projeto Blink Python com ExecStop
+After=multi-user.target
+
+[Service]
+# Tipo simples é o padrão, adequado para scripts que rodam continuamente.
+Type=simple
+# executa o script principal em Python
+ExecStart=/usr/bin/python3 /home/sel/projeto_python.py
+# executa o script de limpeza quando o serviço é parado (systemctl stop)
+ExecStop=/usr/bin/python3 /home/sel/stop_python.py
+# usuário responsável pela execução
+User=SEL
+
+[Install]
+WantedBy=multi-user.target
