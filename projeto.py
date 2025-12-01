@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Shebang: Indica o interpretador Python 3
+# shebang: Indica o interpretador Python 3
 
 import time
 import os
@@ -8,7 +8,7 @@ import os
 gpio_pin = "18"
 gpio_path = f"/sys/class/gpio/gpio{gpio_pin}"
 
-# Função para configurar a GPIO (caso não esteja exportada).
+# função para configurar a GPIO (caso não esteja exportada).
 def setup_gpio():
     if not os.path.exists(gpio_path):
         # Exporta o pino se ele ainda não existir
@@ -25,7 +25,7 @@ def setup_gpio():
 # Executa configuração
 setup_gpio()
 
-# Loop principal do serviço
+# loop principal do serviço
 while True:
     # Liga o LED (escreve '1')
     with open(f"{gpio_path}/value", "w") as f:

@@ -1,15 +1,15 @@
 [Unit]
-# Descrição que aparece nos logs e no status do systemctl
+# descrição que aparece nos logs e no status do systemctl
 Description=Blink LED Service (Bash)
-# Define que o serviço só inicia após o ambiente multi-usuário estar pronto
+# define que o serviço só inicia após o ambiente multi-usuário estar pronto
 After=multi-user.target
 
 [Service]
-# Comando exato para iniciar o serviço (caminho absoluto obrigatório)
+# comando exato para iniciar o serviço (caminho absoluto obrigatório)
 ExecStart=/home/sel/blink.sh
-# Define o usuário que executará o serviço 
+# define o usuário que executará o serviço 
 User=SEL
 
 [Install]
-# Define em qual "target" (grupo de inicialização) o serviço será habilitado
+# define em qual "target" (grupo de inicialização) o serviço será habilitado
 WantedBy=multi-user.target
