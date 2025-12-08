@@ -4,7 +4,7 @@ Description=Projeto Blink Python com ExecStop
 After=multi-user.target
 
 [Service]
-# Tipo simples é o padrão, adequado para scripts que rodam continuamente.
+# tipo simples é o padrão, adequado para scripts que rodam continuamente.
 Type=simple
 # executa o script principal em Python
 ExecStart=/usr/bin/python3 /home/sel/projeto_python.py

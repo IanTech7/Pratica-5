@@ -15,24 +15,24 @@ def setup_gpio():
         with open("/sys/class/gpio/export", "w") as f:
             f.write(gpio_pin)
     
-    # Aguarda o sistema criar os arquivos
+    # aguarda o sistema criar os arquivos
     time.sleep(0.1)
     
-    # Configura como saída (out)
+    # configura como saída (out)
     with open(f"{gpio_path}/direction", "w") as f:
         f.write("out")
 
-# Executa configuração
+# executa configuração
 setup_gpio()
 
 # loop principal do serviço
 while True:
-    # Liga o LED (escreve '1')
+    # liga o LED (escreve '1')
     with open(f"{gpio_path}/value", "w") as f:
         f.write("1")
     time.sleep(0.5)
     
-    # Desliga o LED (escreve '0')
+    # desliga o LED (escreve '0')
     with open(f"{gpio_path}/value", "w") as f:
         f.write("0")
     time.sleep(0.5)

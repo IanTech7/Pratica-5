@@ -1,6 +1,5 @@
 # Prática 5: Configuração do SystemD e Versionamento com Git
 
-## Identificação
 **Disciplina:** SEL0337 - Projetos em Sistemas Embarcados  
 **Alunos:** 
 Ian Henrique Moronte Tech - 6958142
