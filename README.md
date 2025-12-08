@@ -1,6 +1,6 @@
 # Prática 5: Configuração do SystemD e Versionamento com Git
 
-## 👥 Identificação
+## Identificação
 **Disciplina:** SEL0337 - Projetos em Sistemas Embarcados  
 **Alunos:** 
 Ian Henrique Moronte Tech - 6958142
@@ -15,4 +15,4 @@ O projeto consiste em dois serviços principais que iniciam automaticamente no b
 
 ## Parte 1: Serviço com Bash Script
 ### Descrição
-Foi criado um serviço chamado `blink.service` que executa um script shell (`blink.sh`). Este script acessa diretamente os diretórios do sistema (`/sys/class/gpio`) para configurar o pino GPIO 18 como saída e realizar o "blink" (piscar) de um LED.
+Foi criado um serviço chamado `piscar.service` que executa um script shell (`piscar.sh`). Este script acessa diretamente os diretórios do sistema (`/sys/class/gpio`) para configurar o pino GPIO 18 como saída e realizar o "blink" (piscar) de um LED.
